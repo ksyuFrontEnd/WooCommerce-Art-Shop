@@ -231,6 +231,17 @@ input{
         padding: 80px 0;
     }
 }
+
+.first-section {
+    padding: 70px 0 32px;
+}
+
+@media screen and (min-width: 1440px) {
+    .first-section {
+        padding: 120px 0 80px;
+    }
+}
+
   
 .container {
     width: 100%;
@@ -240,14 +251,13 @@ input{
 
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 1440px;
         padding: 0 32px;
     }  
 }
 
 @media screen and (min-width: 1440px) {
     .container {
-        max-width: 1128px;
+        max-width: 1420px;
         padding: 0;
     } 
 }

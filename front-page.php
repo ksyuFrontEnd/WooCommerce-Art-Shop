@@ -1,8 +1,11 @@
 <?php get_header(); ?>
 
 <main class="main">
+    <section class="announcement-section first-section section">
+        <div class="announcement-section__container">Акція!</div>
+    </section>
     <!-- Front-page-slider__section -->
-    <section class="section front-page-slider__section">
+    <section class="front-page-slider__section section">
         <div class="container">
             <?php
             $args = array(

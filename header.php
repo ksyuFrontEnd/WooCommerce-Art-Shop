@@ -15,43 +15,47 @@
 
     <div class="wrapper">
         <header class="header">
-            <div class="header__logo">
-                <a href="<?php echo home_url( '/' ); ?>" class="header__logo-link"><?php bloginfo( 'name' ); ?></a>
-            </div>
-            <div class="header__menu">
-                <?php wp_nav_menu(
-                    array(
-                        'theme_location' => 'header-menu',
-                        'container' => false,
-                    )
-                ); 
-                ?>
-            </div>
-            <div class="header__social-icons">
-                <ul class="social-icons">
-                    <?php if( !empty( $roxydev_theme_options['instagram'] ) ) : ?>
-                        <li>
-                            <a href="<?php echo $roxydev_theme_options['instagram'] ?>">
-                                <p>My Instagram</p>
-                            </a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if( !empty( $roxydev_theme_options['facebook'] ) ) : ?>
-                        <li>
-                            <a href="<?php echo $roxydev_theme_options['facebook'] ?>">
-                                <p>My Facebook</p>
-                            </a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if( !empty( $roxydev_theme_options['telegram'] ) ) : ?>
-                        <li>
-                            <a href="<?php echo $roxydev_theme_options['telegram'] ?>">
-                                <p>My Telegram</p>
-                            </a>
-                        </li>
-                    <?php endif; ?>
-                </ul>
+            <div class="header__container container">
+                <div class="logo">
+                    <a href="<?php echo home_url( '/' ); ?>" class="header__logo-link">
+                        <?php 
+                        if ( function_exists( 'the_custom_logo' ) ) {
+                            the_custom_logo();
+                        } else {
+                            bloginfo( 'name' ); 
+                        }
+                        ?>
+                    </a>
+                </div>
+                <div class="header__icons">
+                    <div class="header__icon search-icon">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/search.svg'); ?>" alt="Search">
+                    </div>
+                    <div class="header__icon registration-icon">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/registration.svg'); ?>" alt="Registration">
+                    </div>
+                    <div class="header__icon cart-icon">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/cart.svg'); ?>" alt="Cart">
+                    </div>
+                </div>
+                <div class="header__menu menu">
+                    <div class="menu__icon">
+                        <!-- .menu__icon::before -->
+                    </div>
+                    <nav class="menu__body">
+                        <?php wp_nav_menu(
+                            array(
+                                'theme_location' => 'header-menu',
+                                'container' => false,
+                                'menu_id'              => false,    
+                                'echo'                 => true,
+                                'depth'                => 0,       
+                                'items_wrap'           => '<ul id="%1$s" class="menu_list %2$s">%3$s</ul>',
+                            )); 
+                        ?>
+                    </nav>
+                </div>
                 
-            </div>
+             </div><!--./container -->
 
         </header>
