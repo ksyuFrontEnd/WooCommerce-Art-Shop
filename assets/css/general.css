@@ -21,13 +21,13 @@ body {
     height: 100%;
     scroll-behavior: smooth;
     /* overflow-x: hidden; */
-    color: #353535;
     scroll-padding-top: 70px;
 }
 
 body {
     margin: 0;
     background-color: #f2f2f2;
+    color: #353535;
 }
 
 hr {
@@ -136,12 +136,14 @@ input,
 select,
 optgroup,
 textarea {
-    color: #353535;
-    font-family: "Nunito", sans-serif;
+    font-family: 'helvetica-light', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
+    color: #353535;
 }
 
 img {
@@ -233,16 +235,27 @@ input{
 }
 
 .first-section {
-    padding: 70px 0 32px;
+    padding: 100px 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .first-section  {
+        padding: 100px 0 32px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .first-section {
+        padding: 120px 0 32px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
     .first-section {
-        padding: 120px 0 80px;
+        padding: 120px 0 56px;
     }
 }
 
-  
 .container {
     width: 100%;
     margin: 0 auto;
@@ -260,4 +273,31 @@ input{
         max-width: 1420px;
         padding: 0;
     } 
+}
+
+/* Helvetica */
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/wp-content/themes/roxydev/assets/fonts/Helvetica.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* helvetica-light */
+@font-face {
+    font-family: 'helvetica-light';
+    src: url('/wp-content/themes/roxydev/assets/fonts/helvetica-light-587ebe5a59211.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap; 
+}
+
+/* GeorgiaPro-CondRegular */
+@font-face {
+    font-family: 'GeorgiaPro-CondRegular';
+    src: url('/wp-content/themes/roxydev/assets/fonts/GeorgiaPro-CondRegular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }

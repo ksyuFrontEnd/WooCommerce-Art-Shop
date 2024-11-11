@@ -40,9 +40,11 @@
 
 .logo {
     /* border-radius: 64% 45% 64% 36% / 43% 45% 63% 57%; */
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .menu__icon {

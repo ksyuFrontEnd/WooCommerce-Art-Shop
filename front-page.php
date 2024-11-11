@@ -1,10 +1,17 @@
 <?php get_header(); ?>
 
 <main class="main">
+
+    <!-- announcement-section -->
     <section class="announcement-section first-section section">
-        <div class="announcement-section__container">Акція!</div>
+        <div class="announcement-section__container">
+            <a href="/" class="announcement-section__link">
+                <h6>Отримати новорічну знижку 10%</h6>
+            </a> 
+        </div>
     </section>
-    <!-- Front-page-slider__section -->
+
+    <!-- front-page-slider__section -->
     <section class="front-page-slider__section section">
         <div class="container">
             <?php
@@ -21,35 +28,34 @@
                     <div class="swiper-wrapper">
                         <?php foreach ($frontPageSlides as $post) : setup_postdata($post); ?>
                             <div class="swiper-slide">
-                                <a href="<?php the_permalink(); ?>">
-                                    <div class="swiper-image">
-                                        <?php if (has_post_thumbnail()) : ?>
-                                            <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>" class="slider__image" alt="<?php echo esc_attr(get_the_title()); ?>">
-                                        <?php endif; ?>
-                                        <div class="slider-caption">
-                                            <h2><?php the_title(); ?></h2>
-                                            <?php the_content(''); ?>
-                                        </div>
-                                    </div>
-                                    
-                                </a>
+                                <div class="swiper-image">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>" class="slider__image" alt="<?php echo esc_attr(get_the_title()); ?>">
+                                    <?php endif; ?>
+                                </div>
+                                <div class="swiper-caption">
+                                    <h2><?php the_title(); ?></h2>
+                                </div>
                             </div>
                         <?php endforeach; wp_reset_postdata(); ?>
                     </div>
                     
-                    <div class="navigation-buttons">
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                    <div class="navigation">
+                        <div class="button-next">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/right_arrow_icon.svg'); ?>" alt="arrow right">
+                        </div>
+                        <div class="button-prev">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/left_arrow_icon.svg'); ?>" alt="arrow left">
+                        </div>
                     </div>
-                    
-                    <div class="swiper-pagination"></div>
+
                 </div>
             <?php endif; ?>
         </div>
     </section>
 
-    <!-- Featured products -->
-    <section class="section featured-products__section">
+    <!-- featured-products__section -->
+    <section class="featured-products__section section">
         <div class="container">
             <h2 class="section__title featured-products__title">
                 <span><?php _e( 'Featured products', 'roxydev' )?></span>
