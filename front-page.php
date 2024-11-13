@@ -34,7 +34,9 @@
                                     <?php endif; ?>
                                 </div>
                                 <div class="swiper-caption">
-                                    <h2><?php the_title(); ?></h2>
+                                    <div class="swiper-caption__inner">
+                                        <h2><?php the_title(); ?></h2>
+                                    </div>
                                 </div>
                             </div>
                         <?php endforeach; wp_reset_postdata(); ?>

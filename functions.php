@@ -20,6 +20,9 @@ function roxydev_add_woocommerce_support() {
         'flex-height' => true, 
         'flex-width'  => true, 
     ) );
+
+    // Add image size for thumbnail in the cart
+    add_image_size( 'cart-image-size', 100, 100, true ); 
 }
 
 // Enqueue styles and scripts

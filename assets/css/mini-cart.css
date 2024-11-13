@@ -1,0 +1,95 @@
+.widget_shopping_cart_content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Horizontal line */
+.minicart-wrapper .minicart-table__body {
+    position: relative; 
+    padding-bottom: 15px; 
+}
+
+.minicart-wrapper .minicart-table__body::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5px; 
+    background-color: #d71232;
+}
+
+/* Products */
+.minicart-table__body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mini_cart_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.mini_cart_item .product-img img {
+    min-width: 100px; 
+    min-height: 100px; 
+    object-fit: cover; 
+    width: auto; 
+    height: auto;
+}
+
+.mini_cart_item .product-quantity, 
+.mini_cart_item .product-name { 
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+.mini_cart_item .product-quantity {
+    width: 28px;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.mini_cart_item .product-price {
+    margin-left: auto;
+    font-weight: 700;
+}
+
+/* Total price */
+.woocommerce-mini-cart__total {
+    margin-left: auto;
+    color: #d71232;
+    font-weight: 700;
+    line-height: 0.5;
+    margin-bottom: 15px;
+}
+
+/* Buttons Cart and Checkout */
+.minicart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.minicart-buttons a {
+    color: #039999;
+    border: 1px solid #039999;
+    border-radius: 6px;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.minicart-buttons a:hover {
+    background-color: #039999;
+    color: #fff;
+}
+
+.minicart-buttons a:active {
+    background-color: #025858;
+    color: #fff;
+}

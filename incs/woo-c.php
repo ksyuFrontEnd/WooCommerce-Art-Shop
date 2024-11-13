@@ -17,3 +17,10 @@ add_filter( 'woocommerce_product_get_rating_html', function( $html, $rating, $co
     return $html;
 	
 }, 10, 3 );
+
+// Update cart count
+add_filter( 'woocommerce_add_to_cart_fragments', function( $fragments ) {
+    $fragments['div.cart-count'] = '<div class="cart-count">' . WC()->cart->get_cart_contents_count() . '</div>';
+
+    return $fragments;
+} ); 
