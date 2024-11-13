@@ -1,3 +1,26 @@
+/* Scroll for mini-cart */
+.woocommerce-mini-cart {
+    max-height: 400px; 
+    overflow-y: auto; 
+    scrollbar-width: thin; /* For Firefox*/
+    scrollbar-color: #c1c1c1 #f9f9f9; 
+}
+
+/* For Chrome, Edge and Safari */
+.woocommerce-mini-cart::-webkit-scrollbar {
+    width: 8px;
+}
+
+.woocommerce-mini-cart::-webkit-scrollbar-track {
+    background-color: #f9f9f9;
+}
+
+.woocommerce-mini-cart::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 4px;
+}
+/* ---------------------------------------------- */
+
 .widget_shopping_cart_content {
     display: flex;
     flex-direction: column;
