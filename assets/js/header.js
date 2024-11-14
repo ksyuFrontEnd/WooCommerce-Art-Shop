@@ -40,4 +40,23 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
+
+    // Search modal
+    const searchIcon = document.querySelector('.search-icon');
+    const searchModal = document.getElementById('search-modal');
+    const closeModal = document.querySelector('.search-modal__close');
+
+    searchIcon.addEventListener('click', function () {
+        searchModal.style.display = 'block';
+    });
+
+    closeModal.addEventListener('click', function () {
+        searchModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target === searchModal) {
+            searchModal.style.display = 'none';
+        }
+    });
 });

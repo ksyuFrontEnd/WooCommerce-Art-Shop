@@ -29,11 +29,22 @@
                         </a>
                     </div> 
 
-                    <div class="header__search">
+                    <div class="header__search-desktop">
                         <?php aws_get_search_form( true ); ?>
                     </div> 
                     
                     <div class="header__icons">
+                        <!-- Search Icon for mobile only -->
+                        <div class="header__icon search-icon">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/search.svg'); ?>" alt="Search">
+                        </div>
+                        <!-- Search Modal for mobile only -->
+                        <div id="search-modal" class="search-modal">
+                            <div class="search-modal__content">
+                                <span class="search-modal__close">&times;</span>
+                                <?php aws_get_search_form(true); ?>
+                            </div>
+                        </div>
                         <div class="header__icon registration-icon">
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/registration.svg'); ?>" alt="Registration">
                         </div>
