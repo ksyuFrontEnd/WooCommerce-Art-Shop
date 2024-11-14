@@ -16,69 +16,72 @@
     <div class="wrapper">
         <header class="header">
             <div class="header__container container">
-                <div class="logo">
-                    <a href="<?php echo home_url( '/' ); ?>" class="header__logo-link">
-                        <?php 
-                        if ( function_exists( 'the_custom_logo' ) ) {
-                            the_custom_logo();
-                        } else {
-                            bloginfo( 'name' ); 
-                        }
-                        ?>
-                    </a>
-                </div>
-                <div class="header__icons">
-                    <div class="header__icon search-icon">
-                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/search.svg'); ?>" alt="Search">
-                    </div>
-                    <div class="header__icon registration-icon">
-                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/registration.svg'); ?>" alt="Registration">
-                    </div>
-                    
-                    <!-- Mini-cart ----------------------------------------------------------------------------->
-                    <div class="header-cart">
-                        <!-- Cart icon -->
-                        <div class="header__icon cart-icon">
-                            <a href="<?php echo esc_url(wc_get_cart_url()); ?>" id="cart-icon">
-                                <img class="cart-desktop" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/cart.svg'); ?>" alt="Cart">
-                                <?php if (WC()->cart->get_cart_contents_count() > 0) : ?>
-                                    <div class="cart-count" style="display: block">
-                                        <?php echo WC()->cart->get_cart_contents_count(); ?>
-                                    </div>
-                                <?php else : ?>
-                                    <div class="cart-count" style="display: none">
-                                        <?php echo WC()->cart->get_cart_contents_count(); ?>
-                                    </div>
-                                <?php endif; ?>
-                            </a>
-                        </div>
 
-                        <!-- Mini cart content-->
-                        <div id="mini-cart" class="mini-cart">
-                            <?php if (function_exists('woocommerce_mini_cart')) {
-                                woocommerce_mini_cart();
-                            } ?>
-                        </div>
-                    </div>
+                    <div class="logo">
+                        <a href="<?php echo home_url( '/' ); ?>" class="header__logo-link">
+                            <?php 
+                            if ( function_exists( 'the_custom_logo' ) ) {
+                                the_custom_logo();
+                            } else {
+                                bloginfo( 'name' ); 
+                            }
+                            ?>
+                        </a>
+                    </div> 
+
+                    <div class="header__search">
+                        <?php aws_get_search_form( true ); ?>
+                    </div> 
                     
-                </div>
-                <div class="header__menu menu">
-                    <div class="menu__icon">
-                        <!-- .menu__icon::before -->
-                    </div>
-                    <nav class="menu__body">
-                        <?php wp_nav_menu(
-                            array(
-                                'theme_location' => 'header-menu',
-                                'container' => false,
-                                'menu_id'              => false,    
-                                'echo'                 => true,
-                                'depth'                => 0,       
-                                'items_wrap'           => '<ul id="%1$s" class="menu_list %2$s">%3$s</ul>',
-                            )); 
-                        ?>
-                    </nav>
-                </div>
+                    <div class="header__icons">
+                        <div class="header__icon registration-icon">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/registration.svg'); ?>" alt="Registration">
+                        </div>
+                        
+                        <!-- Mini-cart ----------------------------------------------------------------------------->
+                        <div class="header-cart">
+                            <!-- Cart icon -->
+                            <div class="header__icon cart-icon">
+                                <a href="<?php echo esc_url(wc_get_cart_url()); ?>" id="cart-icon">
+                                    <img class="cart-desktop" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/cart.svg'); ?>" alt="Cart">
+                                    <?php if (WC()->cart->get_cart_contents_count() > 0) : ?>
+                                        <div class="cart-count" style="display: block">
+                                            <?php echo WC()->cart->get_cart_contents_count(); ?>
+                                        </div>
+                                    <?php else : ?>
+                                        <div class="cart-count" style="display: none">
+                                            <?php echo WC()->cart->get_cart_contents_count(); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </a>
+                            </div>
+
+                            <!-- Mini cart content-->
+                            <div id="mini-cart" class="mini-cart">
+                                <?php if (function_exists('woocommerce_mini_cart')) {
+                                    woocommerce_mini_cart();
+                                } ?>
+                            </div>
+                        </div>   
+                    </div> <!-- ./header__icons -->
+
+                    <div class="header__menu menu">
+                        <div class="menu__icon">
+                            <!-- .menu__icon::before -->
+                        </div>
+                        <nav class="menu__body">
+                            <?php wp_nav_menu(
+                                array(
+                                    'theme_location' => 'header-menu',
+                                    'container' => false,
+                                    'menu_id'              => false,    
+                                    'echo'                 => true,
+                                    'depth'                => 0,       
+                                    'items_wrap'           => '<ul id="%1$s" class="menu_list %2$s">%3$s</ul>',
+                                )); 
+                            ?>
+                        </nav>
+                    </div><!--./header__menu menu -->
                 
              </div><!--./container -->
 
