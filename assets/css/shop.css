@@ -1,0 +1,63 @@
+/* Breadcrunbs */
+.breadcrumbs ul {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.breadcrumbs ul li {
+    color: #353535;
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs ul li:hover {
+    color: #039999;
+}
+
+.breadcrumbs ul li:last-child {
+    color: #808080;
+}
+
+/* Shop */
+.shop__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+
+.shop__sidebar {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .shop__wrapper {
+        flex-direction: row;
+    }
+
+    .shop__sidebar {
+        width: 25%;
+    }
+}
+
+/* Count of cards in a row */
+.product-card__shop {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;  
+}
+   
+@media screen and (min-width: 768px) {
+    .product-card__shop {
+        max-width: calc((100% - 24px) / 2);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-card__shop {
+        max-width: calc((100% - 24px * 2) / 3);
+    }
+}
+

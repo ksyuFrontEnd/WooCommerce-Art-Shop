@@ -24,3 +24,15 @@ add_filter( 'woocommerce_add_to_cart_fragments', function( $fragments ) {
 
     return $fragments;
 } ); 
+
+// Customize the WooCommerce breadcrumb
+add_filter( 'woocommerce_breadcrumb_defaults', function() {
+    return array(
+        'delimiter'   => ' &gt; ',
+        'wrap_before' => '<section class="first-section section"><div class="container"><nav class="breadcrumbs"><ul>',
+        'wrap_after'  => '</ul></nav></div></section>',
+        'before'      => '<li>',
+        'after'       => '</li>',
+        'home'        => __( 'Home', 'roxydev' ),
+    );
+} );

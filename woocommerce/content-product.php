@@ -23,9 +23,15 @@ global $product;
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
+
+$product_classes = is_front_page() ? 'product-card' : 'product-card__shop'
+
 ?>
 
-<div <?php wc_product_class( 'product-card', $product ); ?>>
+<div <?php wc_product_class( $product_classes, $product ); ?>>
+	<div class="add_to_cart_loader">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/add_to_cart_loader.svg" alt="loader">
+	</div>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
