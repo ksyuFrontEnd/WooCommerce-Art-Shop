@@ -38,6 +38,10 @@
     .shop__sidebar {
         width: 25%;
     }
+
+    .shop__content {
+        width: 75%;
+    }
 }
 
 /* Count of cards in a row */
@@ -85,5 +89,55 @@
     border-color: rgb(3, 153, 153);
 }
 
+/* Pagination */
+.roxydev-shop-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
 
+.woocommerce-pagination ul.page-numbers {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
 
+.woocommerce-pagination li .page-numbers {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: var(--accent-color);
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    text-decoration: none;
+}
+
+.woocommerce-pagination span.page-numbers {
+    z-index: 3;
+    color: #fff;
+    background-color: #039999;
+    border-color: #039999;
+}
+
+.woocommerce-pagination a.page-numbers:hover {
+    z-index: 2;
+    color: #039999;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+@media screen and (min-width: 768px) {
+    .roxydev-shop-pagination {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .roxydev-shop-pagination {
+        margin-top: 60px;
+    }
+}
