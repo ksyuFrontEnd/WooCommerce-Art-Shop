@@ -1,4 +1,4 @@
-/* Breadcrunbs */
+/* Breadcrumbs */
 .breadcrumbs ul {
     display: flex;
     gap: 10px;
@@ -15,7 +15,7 @@
 }
 
 .breadcrumbs ul li:last-child {
-    color: #808080;
+    color: #757575;
 }
 
 /* Shop */
@@ -60,4 +60,30 @@
         max-width: calc((100% - 24px * 2) / 3);
     }
 }
+
+/* before-shop-container */
+.before-shop-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    color: #757575;
+    margin: 15px 0;
+}
+
+.before-shop-container form select {
+    font-size: 14px;
+    letter-spacing: 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #757575;
+    padding: 5px;
+}
+
+.before-shop-container form select:focus {
+    box-shadow: 2px 2px 4px rgba(3, 153, 153, 0.2);
+    border-color: rgb(3, 153, 153);
+}
+
+
 

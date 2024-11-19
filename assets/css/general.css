@@ -301,3 +301,15 @@ input{
     font-style: normal;
     font-display: swap;
 }
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #039999;;
+}
+
+@media screen and (min-width: 1024px) {
+    .page-title {
+        font-size: 36px;
+    }  
+}

@@ -142,7 +142,7 @@
     row-gap: 40px;
 }
 
-.product-card {
+.product-card__main {
     position: relative;
     width: 100%;
     display: flex;
@@ -151,19 +151,19 @@
 }
 
 @media screen and (min-width: 768px) {
-    .product-card {
+    .product-card__main {
         max-width: calc((100% - 24px) / 2);
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .product-card {
+    .product-card__main {
         max-width: calc((100% - 24px * 2) / 3);
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .product-card {
+    .product-card__main {
         max-width: calc((100% - 24px * 3) / 4);
     }
 }

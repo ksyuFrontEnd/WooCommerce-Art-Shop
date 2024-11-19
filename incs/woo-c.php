@@ -36,3 +36,9 @@ add_filter( 'woocommerce_breadcrumb_defaults', function() {
         'home'        => __( 'Home', 'roxydev' ),
     );
 } );
+
+// Remove notices on the shop page
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10 );
+
+// Remove result count on the shop page
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
