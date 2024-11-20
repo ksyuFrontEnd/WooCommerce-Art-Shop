@@ -42,3 +42,22 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices',
 
 // Remove result count on the shop page
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+
+// Register sidebar widget
+add_action( 'widgets_init', function() {
+    register_sidebar(
+		array(
+			'name'          => __( 'Sidebar', 'roxydev' ),
+			'id'            => 'sidebar_shop',
+			'description'   => __( 'Add widgets here to appear in your sidebar.', 'roxydev' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+} );
+
+
+
+
