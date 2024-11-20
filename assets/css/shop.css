@@ -141,3 +141,8 @@
         margin-top: 60px;
     }
 }
+
+/* Filter in the sidebar */
+.wpc-filter-chips-list a, body .wpc-filter-chips-list li.wpc-filter-chip a {
+    border-radius: 0 !important;
+}
