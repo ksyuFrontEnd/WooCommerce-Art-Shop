@@ -2,8 +2,6 @@
 
 <?php do_action( 'woocommerce_before_main_content' ); ?>
 
-<?php var_dump( is_search() ); ?>
-
 	<section class="shop-section section">
 		<div class="container">
 			<div class="shop__wrapper">
