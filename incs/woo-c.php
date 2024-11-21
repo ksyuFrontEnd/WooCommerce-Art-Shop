@@ -58,6 +58,10 @@ add_action( 'widgets_init', function() {
 	);
 } );
 
+// Remove titles for categories on the front-page
+remove_action( 'woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title', 10);
 
-
-
+// Add custom titles for categories on the front-page
+add_action( 'woocommerce_shop_loop_subcategory_title', function( $category ) {
+    echo "<h5 class='category-title'>{$category->name} <span>({$category->count})</span></h5>";
+}, 10 );

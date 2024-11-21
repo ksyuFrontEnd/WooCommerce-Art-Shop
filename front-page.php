@@ -57,12 +57,14 @@
     </section>
 
     <!-- Categories section -->
-    <section class="front-page-categories__section section">
+    <section class="categories__section section">
         <div class="container">
             <h2 class="section__title categories__title">
                 <span><?php _e( 'Categories', 'roxydev' )?></span>
             </h2>
-            <?php echo do_shortcode( '[product_categories]' ); ?>
+            <div class="categories__wrapper">
+                <?php echo do_shortcode( '[product_categories]' ); ?>
+            </div>
         </div>
     </section>
 
