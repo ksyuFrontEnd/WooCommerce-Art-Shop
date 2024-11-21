@@ -160,3 +160,7 @@
     box-shadow: 2px 2px 4px rgba(3, 153, 153, 0.2);
     border-color: rgb(3, 153, 153);
 }
+
+.wpc-checkbox-item .children {
+    font-size: 14px;
+}

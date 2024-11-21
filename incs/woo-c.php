@@ -59,9 +59,25 @@ add_action( 'widgets_init', function() {
 } );
 
 // Remove titles for categories on the front-page
-remove_action( 'woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title', 10);
+remove_action( 'woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title', 10 );
 
 // Add custom titles for categories on the front-page
 add_action( 'woocommerce_shop_loop_subcategory_title', function( $category ) {
     echo "<h5 class='category-title'>{$category->name} <span>({$category->count})</span></h5>";
 }, 10 );
+
+// Remove sidebar from single product page
+add_action( 'template_redirect', function() {
+    if ( is_product() ) {
+        remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+    }
+} );
+
+// Set image size on a single product page
+add_filter('woocommerce_get_image_size_single', function($size) {
+    return [
+        'width'  => 400, 
+        'height' => 500,
+        'crop'   => 1,   
+    ];
+});

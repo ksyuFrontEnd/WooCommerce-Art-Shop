@@ -1,0 +1,24 @@
+/* Size of main image */
+.woocommerce-product-gallery {
+    width: 100%;
+}
+
+/* Size of gallery */
+.woocommerce-product-gallery .flex-control-nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Size of thumbnails */
+.woocommerce-product-gallery .flex-control-nav li {
+    width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+    /* Size of thumbnails */
+    .woocommerce-product-gallery {
+        width: 400px;
+    }
+}

@@ -23,6 +23,10 @@ function roxydev_add_woocommerce_support() {
 
     // Add image size for thumbnail in the cart
     add_image_size( 'cart-image-size', 100, 100, true ); 
+
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
 }
 
 // Enqueue styles and scripts
