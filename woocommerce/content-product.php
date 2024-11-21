@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 
-$product_classes = is_front_page() ? 'product-card__main' : 'product-card__shop'
+$product_classes = ( is_front_page() || is_search() ) ? 'product-card__main' : 'product-card__shop'
 
 ?>
 

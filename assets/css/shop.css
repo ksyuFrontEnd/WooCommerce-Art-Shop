@@ -39,8 +39,12 @@
         width: 25%;
     }
 
-    .shop__content {
+    .shop__content-3cards {
         width: 75%;
+    }
+
+    .shop__content-4cards {
+        width: 100%;
     }
 }
 

@@ -2,13 +2,20 @@
 
 <?php do_action( 'woocommerce_before_main_content' ); ?>
 
+<?php var_dump( is_search() ); ?>
+
 	<section class="shop-section section">
 		<div class="container">
 			<div class="shop__wrapper">
-				<div class="shop__sidebar">
-					<?php do_action( 'woocommerce_sidebar' ); ?>
-				</div>
-				<div class="shop__content">
+
+				<?php if ( ! is_search()): ?>
+					<div class="shop__sidebar">
+						<?php do_action( 'woocommerce_sidebar' ); ?>
+					</div>
+				<?php endif; ?>
+
+				<?php $shop_content = is_search() ? 'shop__content-4cards' : 'shop__content-3cards' ?>
+				<div class="<?php echo $shop_content ?>">
 					<div class="shop__content-header">
 						<?php do_action( 'woocommerce_shop_loop_header' ); ?>
 					</div>
