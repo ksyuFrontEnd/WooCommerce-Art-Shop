@@ -84,7 +84,7 @@
     letter-spacing: 0;
     width: 100%;
     max-width: 300px;
-    border: 1px solid #757575;
+    border: 1px solid #c5c5c5;
     padding: 5px;
 }
 
@@ -149,4 +149,14 @@
 /* Filter in the sidebar */
 .wpc-filter-chips-list a, body .wpc-filter-chips-list li.wpc-filter-chip a {
     border-radius: 0 !important;
+}
+
+.wpc-filters-range-wrapper input[type=number] {
+    border: 1px solid #c5c5c5;
+    padding: 5px;
+}
+
+.wpc-filters-range-wrapper input[type=number]:focus {
+    box-shadow: 2px 2px 4px rgba(3, 153, 153, 0.2);
+    border-color: rgb(3, 153, 153);
 }
