@@ -1,6 +1,14 @@
 /* Size of main image */
 .woocommerce-product-gallery {
     width: 100%;
+    position: relative;
+}
+
+.woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 2;
 }
 
 /* Size of gallery */
@@ -17,9 +25,25 @@
     
 }
 
+/* Product info */
+.roxydev-product-title {
+    font-size: 24px;
+}
+
+.single-product__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 @media screen and (min-width: 768px) {
+
     /* Size of thumbnails */
     .woocommerce-product-gallery {
         width: 400px;
+    }
+
+    /* Product info */
+    .single-product__wrapper {
+        flex-direction: row;
     }
 }
