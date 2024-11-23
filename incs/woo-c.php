@@ -74,7 +74,7 @@ add_action( 'template_redirect', function() {
 } );
 
 // Set image size on a single product page
-add_filter('woocommerce_get_image_size_single', function($size) {
+add_filter( 'woocommerce_get_image_size_single', function($size) {
     return [
         'width'  => 400, 
         'height' => 500,
@@ -82,10 +82,6 @@ add_filter('woocommerce_get_image_size_single', function($size) {
     ];
 });
 
-// Relocate output_product_data_tabs on a single product page
-function move_product_data_tabs() {
-    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
-    add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 70);
-}
-
-add_action( 'init', 'move_product_data_tabs' );
+// Remove woocommerce_upsell_display and woocommerce_output_related_products on a single product page
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
