@@ -37,32 +37,40 @@
 
 .product__add2cart {
     display: flex;
+    gap: 10px;
 }
 
-.product__add2cart .input-group {
+.product__add2cart .input-group,
+.woocommerce-grouped-product-list .input-group {
     max-width: 150px;
     border: 1px solid black;
     display: flex;
 }
 
 .single-product__add2cart-btn {
-    margin-left: 10px;
+    /* margin-left: 10px; */
     border: 1px solid black;
 }
 
+/* .woocommerce-grouped-product-list .single-product__add2cart-btn {
+    margin-left: 0;
+} */
 
 /* Remove default input arrows */
 
 /* Chrome, Safari, Edge, Opera */
 .product__add2cart input.qty::-webkit-outer-spin-button,
-.product__add2cart input.qty::-webkit-inner-spin-button {
+.product__add2cart input.qty::-webkit-inner-spin-button,
+.woocommerce-grouped-product-list input.qty::-webkit-outer-spin-button,
+.woocommerce-grouped-product-list input.qty::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
     text-align: center;
 }
 
 /* Firefox */
-.product__add2cart input.qty[type=number] {
+.product__add2cart input.qty[type=number],
+.woocommerce-grouped-product-list input.qty[type=number] {
     -moz-appearance: textfield;
     text-align: center;
     width: 100px;
