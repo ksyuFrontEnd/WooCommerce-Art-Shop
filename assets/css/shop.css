@@ -1,22 +1,22 @@
 /* Breadcrumbs */
 .breadcrumbs ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    font-size: 14px;
 }
 
 .breadcrumbs ul li {
-    color: #353535;
+    color: #039999;
     transition: color 0.3s ease;
 }
 
-.breadcrumbs ul li:hover {
+/* .breadcrumbs ul li:hover {
     color: #039999;
-}
+} */
 
-.breadcrumbs ul li:last-child {
+/* .breadcrumbs ul li:last-child {
     color: #757575;
-}
+} */
 
 /* Shop */
 .shop__wrapper {

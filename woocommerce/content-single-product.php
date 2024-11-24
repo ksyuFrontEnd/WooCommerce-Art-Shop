@@ -18,15 +18,17 @@ global $product;
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'content-single-product__wrapper', $product ); ?>>
 	<div class="single-product__wrapper">
 
-		<?php
-		/**
-		 * Hook: woocommerce_before_single_product_summary.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		do_action( 'woocommerce_before_single_product_summary' );
-		?>
+		<div class="single-product-thumb">
+			<?php
+			/**
+			 * Hook: woocommerce_before_single_product_summary.
+			 *
+			 * @hooked woocommerce_show_product_sale_flash - 10
+			 * @hooked woocommerce_show_product_images - 20
+			 */
+			do_action( 'woocommerce_before_single_product_summary' );
+			?>
+		</div>
 
 		<div class="summary entry-summary">
 			<?php
@@ -58,5 +60,10 @@ global $product;
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
 </div>
+
+<?php 
+woocommerce_upsell_display();
+woocommerce_output_related_products(); 
+?>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

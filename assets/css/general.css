@@ -26,9 +26,7 @@ body {
 
 body {
     margin: 0;
-    /* background-color: #f2f2f2; */
     background-color: #fff;
-    /* color: #353535; */
     color: #000;
 }
 
@@ -139,13 +137,13 @@ select,
 optgroup,
 textarea {
     font-family: 'helvetica-light', sans-serif;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 0.2em;
-    font-size: 20px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
-    color: #353535;
+    color: #000;
 }
 
 img {
@@ -181,9 +179,18 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+    font-family: 'GeorgiaPro-CondRegular', serif;
+    font-weight: 400;
+    letter-spacing: 0.0em;
+    line-height: 1;
+}
+
 p {
-    font: inherit;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.0em;
+    line-height: 1.4;
 }
 
 ul,
@@ -237,7 +244,7 @@ input{
 }
 
 .first-section {
-    padding: 100px 0 16px;
+    padding: 100px 0 0px;
 }
 
 @media screen and (min-width: 768px) {
@@ -308,6 +315,12 @@ input{
     font-size: 24px;
     font-weight: 700;
     color: #039999;
+}
+
+.section-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 @media screen and (min-width: 1024px) {

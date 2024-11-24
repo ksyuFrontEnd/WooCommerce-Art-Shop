@@ -85,3 +85,6 @@ add_filter( 'woocommerce_get_image_size_single', function($size) {
 // Remove woocommerce_upsell_display and woocommerce_output_related_products on a single product page
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+// Remove SKU and category from single product description
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );

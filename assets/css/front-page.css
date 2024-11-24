@@ -26,7 +26,7 @@
 
 /*====================================== front-page-slider__section ================================ */
 .front-page-slider__section {
-    padding-top: 0;
+    padding-top: 16px;
 }
 
 .swiper-container {
@@ -233,13 +233,17 @@
 }
 
 .product-card-offer>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     line-height: 40px;
     text-align: center;
-    font-weight: bold;
     font-size: 14px;
+    text-transform: uppercase;
     margin-bottom: 5px;
 }
 
@@ -281,8 +285,6 @@
     text-overflow: ellipsis;
     padding-bottom: 8px;
 }
-
-
 
 /* Price */
 .product-details__center {
