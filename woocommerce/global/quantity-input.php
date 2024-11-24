@@ -20,7 +20,7 @@ if ( $product->get_stock_quantity() > 1 ) : ?>
 	?>
 
 	<div class="input-group">
-		<button type="button" class="button btn-minus"><i class="fa-solid fa-minus"></i></button>
+		<button type="button" class="button btn-minus"><i class="fa-solid fa-minus qty-icon"></i></button>
 		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
 		<input
 			type="<?php echo esc_attr( $type ); ?>"
@@ -42,7 +42,7 @@ if ( $product->get_stock_quantity() > 1 ) : ?>
 				autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
 			<?php endif; ?>
 		/>
-		<button type="button" class="button btn-plus"><i class="fa-solid fa-plus"></i></button>
+		<button type="button" class="button btn-plus"><i class="fa-solid fa-plus qty-icon"></i></button>
 	 </div> <!--./input-group -->
 
 	<?php

@@ -76,8 +76,8 @@ add_action( 'template_redirect', function() {
 // Set image size on a single product page
 add_filter( 'woocommerce_get_image_size_single', function($size) {
     return [
-        'width'  => 400, 
-        'height' => 500,
+        'width'  => 700, 
+        'height' => 700,
         'crop'   => 1,   
     ];
 });

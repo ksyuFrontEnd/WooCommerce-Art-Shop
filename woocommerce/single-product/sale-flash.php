@@ -22,15 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post, $product;
 
 ?>
-
-<div class="single-product__sale-wrapper">
-	<?php if ( $product->is_on_sale() ) : ?>
-
+<?php if ( $product->is_on_sale() ) : ?>
+	<div class="single-product__sale-wrapper">
+	
 		<?php echo apply_filters( 'woocommerce_sale_flash', '<div class="onsale">' . esc_html__( 'Sale', 'roxydev' ) . '</div>', $post, $product ); ?>
 
-		<?php
-	endif; ?>
-</div>
+	</div>
+<?php endif; ?>
 
 
 

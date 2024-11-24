@@ -18,7 +18,7 @@ global $product;
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'content-single-product__wrapper', $product ); ?>>
 	<div class="single-product__wrapper">
 
-		<div class="single-product-thumb">
+		<!-- <div class="single-product-thumb"> -->
 			<?php
 			/**
 			 * Hook: woocommerce_before_single_product_summary.
@@ -28,7 +28,7 @@ global $product;
 			 */
 			do_action( 'woocommerce_before_single_product_summary' );
 			?>
-		</div>
+		<!-- </div> -->
 
 		<div class="summary entry-summary">
 			<?php
