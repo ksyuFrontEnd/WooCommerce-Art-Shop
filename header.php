@@ -50,30 +50,32 @@
                         </div>
                         
                         <!-- Mini-cart ----------------------------------------------------------------------------->
-                        <div class="header-cart">
-                            <!-- Cart icon -->
-                            <div class="header__icon cart-icon">
-                                <a href="<?php echo esc_url(wc_get_cart_url()); ?>" id="cart-icon">
-                                    <img class="cart-desktop" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/cart.svg'); ?>" alt="Cart">
-                                    <?php if (WC()->cart->get_cart_contents_count() > 0) : ?>
-                                        <div class="cart-count" style="display: block">
-                                            <?php echo WC()->cart->get_cart_contents_count(); ?>
-                                        </div>
-                                    <?php else : ?>
-                                        <div class="cart-count" style="display: none">
-                                            <?php echo WC()->cart->get_cart_contents_count(); ?>
-                                        </div>
-                                    <?php endif; ?>
-                                </a>
-                            </div>
+                         <?php if ( ! is_cart() ): ?>
+                            <div class="header-cart">
+                                <!-- Cart icon -->
+                                <div class="header__icon cart-icon">
+                                    <a href="<?php echo esc_url(wc_get_cart_url()); ?>" id="cart-icon">
+                                        <img class="cart-desktop" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/cart.svg'); ?>" alt="Cart">
+                                        <?php if (WC()->cart->get_cart_contents_count() > 0) : ?>
+                                            <div class="cart-count" style="display: block">
+                                                <?php echo WC()->cart->get_cart_contents_count(); ?>
+                                            </div>
+                                        <?php else : ?>
+                                            <div class="cart-count" style="display: none">
+                                                <?php echo WC()->cart->get_cart_contents_count(); ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </a>
+                                </div>
 
-                            <!-- Mini cart content-->
-                            <div id="mini-cart" class="mini-cart">
-                                <?php if (function_exists('woocommerce_mini_cart')) {
-                                    woocommerce_mini_cart();
-                                } ?>
-                            </div>
-                        </div>   
+                                <!-- Mini cart content-->
+                                <div id="mini-cart" class="mini-cart">
+                                    <?php if (function_exists('woocommerce_mini_cart')) {
+                                        woocommerce_mini_cart();
+                                    } ?>
+                                </div>
+                            </div>  
+                        <?php endif; ?>
                     </div> <!-- ./header__icons -->
 
                     <div class="header__menu menu">
