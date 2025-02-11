@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
     })
 
     // Change quantity by click on + and -
-    $('.quantity button').on('click', function() {
+    $('main.main').on('click', '.quantity button', function() {
         let btn = $(this);
         let inputQty = btn.parent().find('.qty');
         let prevValue = +(inputQty.val());
@@ -33,5 +33,6 @@ jQuery(document).ready(function($) {
             }
        }
        inputQty.val(newValue);
+       $('.update-cart').prop('disabled', false);
     });
 });

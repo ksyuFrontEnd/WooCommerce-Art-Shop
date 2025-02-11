@@ -1,3 +1,34 @@
 .cart-table__head {
     display: flex;
 }
+
+.product-quantity .input-group {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #039999;
+    border-radius: 3px;
+    display: flex;
+}
+
+.product-quantity .btn-minus,
+.product-quantity .btn-plus {
+    background-color: #039999;
+    width: 50px;
+}
+
+/* Remove default input arrows */
+
+/* Chrome, Safari, Edge, Opera */
+.woocommerce-cart-form input.qty::-webkit-outer-spin-button,
+.woocommerce-cart-form input.qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    text-align: center;
+}
+
+/* Firefox */
+.woocommerce-cart-form input.qty[type=number] {
+    -moz-appearance: textfield;
+    text-align: center;
+    width: 100px;
+}
