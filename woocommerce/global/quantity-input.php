@@ -5,9 +5,7 @@ defined( 'ABSPATH' ) || exit;
 /* translators: %s: Quantity. */
 $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 'woocommerce' ), wp_strip_all_tags( $args['product_name'] ) ) : esc_html__( 'Quantity', 'woocommerce' );
 
-global $product;
-
-if ( $product->get_stock_quantity() > 1 ) : ?>
+?>
 
 <div class="quantity">
 	<?php
@@ -54,5 +52,3 @@ if ( $product->get_stock_quantity() > 1 ) : ?>
 	do_action( 'woocommerce_after_quantity_input_field' );
 	?>
 </div>
-
-<?php endif; ?>
