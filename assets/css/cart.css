@@ -3,7 +3,7 @@
 }
 
 .product-quantity .input-group {
-    width: 200px;
+    width: 150px;
     height: 50px;
     border: 1px solid #039999;
     border-radius: 3px;
@@ -30,5 +30,13 @@
 .woocommerce-cart-form input.qty[type=number] {
     -moz-appearance: textfield;
     text-align: center;
+    width: 50px;
+}
+
+.product-thumbnail img {
     width: 100px;
+}
+
+.product-remove img {
+    width: 16px;
 }
