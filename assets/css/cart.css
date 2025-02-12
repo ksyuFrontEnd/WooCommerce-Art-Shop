@@ -1,10 +1,123 @@
-.cart-table__head {
-    display: flex;
+/* ------------------------ Cart messages --------------------- */
+.cart-messages__section {
+    padding: 32px 0 0 0;
 }
 
+.woocommerce-notices-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.woocommerce-message {
+    color: #d71232;
+    font-size: 20px;
+}
+
+.wc-backward {
+    color: #039999;
+    font-size: 20px;
+}
+
+.wc-backward:hover {
+    text-decoration: underline;
+}
+
+/* ------------------- Table ------------------- */
+.cart-table__section {
+    padding: 0 0 32px 0;
+}
+
+.woocommerce-cart table.cart {
+    border: none;
+    width: 100%;
+}
+
+.woocommerce-cart table.cart th {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.38;
+}
+
+/* ------------------------------------- Table body ---------------------------------*/
+.soulcraft_table__body {
+    display: block;
+}
+
+.soulcraft_table__body tr {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e1e3e5;
+}
+
+.soulcraft_table__body tr:last-child {
+    border-bottom: 1px solid transparent;
+    box-shadow: inset 0 -1px 0 0 #039999;
+    background: #fff;
+    padding: 32px 0;
+}
+
+.soulcraft_table__body td {
+    padding: 0 30px 0 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.31;  
+    display: flex;
+    align-items: center;
+}
+
+.soulcraft_table__body td.actions {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.soulcraft_table__body .product-thumbnail,
+.soulcraft_table__body .product-name {
+    margin: 30px 0 20px;
+}
+
+.soulcraft_table__body .product-thumbnail {
+    width: 100px;
+    margin-right: 24px;
+}
+
+.soulcraft_table__body .product-thumbnail img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.soulcraft_table__body .product-name {
+    width: 50%; 
+}
+
+.soulcraft_table__body .product-name a {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.soulcraft_table__body .product-quantity {
+    margin-right: 9px;
+}
+
+.soulcraft_table__body td.product-remove {
+    padding: 0;
+}
+
+.product-remove img {
+    width: 16px;
+}
+
+/* Input group */
 .product-quantity .input-group {
-    width: 150px;
-    height: 50px;
+    width: 90px;
+    height: 30px;
     border: 1px solid #039999;
     border-radius: 3px;
     display: flex;
@@ -13,12 +126,10 @@
 .product-quantity .btn-minus,
 .product-quantity .btn-plus {
     background-color: #039999;
-    width: 50px;
+    width: 30px;
 }
 
 /* Remove default input arrows */
-
-/* Chrome, Safari, Edge, Opera */
 .woocommerce-cart-form input.qty::-webkit-outer-spin-button,
 .woocommerce-cart-form input.qty::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -26,17 +137,171 @@
     text-align: center;
 }
 
-/* Firefox */
 .woocommerce-cart-form input.qty[type=number] {
     -moz-appearance: textfield;
     text-align: center;
-    width: 50px;
+    width: 30px;
 }
 
-.product-thumbnail img {
-    width: 100px;
+/* -------------------------------- Collaterals --------------------------------- */
+
+.actions button {
+    background: #039999;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .3em;
+    line-height: 1.42;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: normal;
+    min-width: 150px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.product-remove img {
-    width: 16px;
+/* ------------------------------- Total --------------------------------------- */
+
+.cart-totals__section {
+    padding: 0 0 32px 0;
+}
+
+.order-total th {
+    padding-right: 10px;
+}
+
+.order-total th,
+.order-total td {
+    color: #d71232;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.cart-collaterals {
+    display: flex;
+    justify-content: center;
+}
+
+.soulcraft__checkout-button {
+    background: #039999;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .3em;
+    line-height: 1.42;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: normal;
+    min-width: 150px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 375px) {
+    .soulcraft_table__body .product-name {
+        width: 62%;
+    }
+}
+
+/* --------------------------------------- Tablet and Desktop ------------------------------------ */
+
+@media screen and (min-width: 768px) {
+    .cart-messages__section {
+        padding: 0;
+    }
+
+    .soulcraft_table__body tr {  
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .soulcraft_table__body tr td {
+        padding: 24px 0 0 0;
+    }
+
+    .soulcraft_table__body .product-thumbnail,
+    .soulcraft_table__body .product-name {
+        margin: 0;
+    }
+
+    .soulcraft_table__body .product-name {
+        width: 41.1%;
+        padding-right: 24px;
+    }
+
+    .product-quantity .input-group {
+        width: 150px;
+        height: 50px;
+    }
+    
+    .product-quantity .btn-minus,
+    .product-quantity .btn-plus {
+        width: 50px;
+    }
+    
+    /* Remove default input arrows */
+    .woocommerce-cart-form input.qty[type=number] {
+        width: 50px;
+    }
+
+    .soulcraft_table__body td.product-remove {
+        padding: 24px 0 0 0;
+    }
+
+    .soulcraft_table__body td.actions {
+        margin: 0 0 0 auto;
+    }
+
+    .cart-collaterals {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .cart-table__section {
+        padding: 56px 0;
+    }
+
+    .soulcraft_table__body tr td {
+        padding: 36px 0 0 0;
+    }
+
+    .mywoo-cart-table__body tr:last-child {
+        padding-bottom: 36px;
+    }
+
+    .soulcraft_table__body .product-name {
+        width: 565px;
+    }
 }
