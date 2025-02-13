@@ -178,6 +178,7 @@ do_action( 'woocommerce_before_main_content' ); ?>
 		</div>
 	</section>
 
+	<!-- Cart totals -->
 	<section class="cart-totals__section section">
 		<div class="container">
 			
