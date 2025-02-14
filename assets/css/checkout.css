@@ -1,7 +1,7 @@
 /* ---------------------------- Coupon ------------------------------------- */
 
 .woocommerce-form-coupon-toggle .click-here-message {
-    color: #d71232;
+    color: #039999;
     font-weight: 700;
 }
 
@@ -122,7 +122,22 @@ abbr[title] {
     display: none;
 }
 
+/*---------------------------------------- Error messages -------------------------------------- */
+
+.woocommerce-NoticeGroup-checkout {
+    border-top: 1px solid #d71232;
+    margin-top: 20px;
+}
+
+.woocommerce-error li {
+    color: #d71232;
+}
+
 /* ---------------------------------------- Order review ---------------------------------------- */
+
+.woocommerce-checkout-review-order table {
+    width: 100%;
+}
 
 .woocommerce-checkout-review-order-table tr {
     display: flex;
@@ -203,10 +218,22 @@ abbr[title] {
         gap: 30px;
     }
 
-    .checkout {
+    /* .checkout {
         flex-direction: row;
         gap: 32px;
-    }
+    } */
+
+    .checkout {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 10%, 1fr;
+        grid-column-gap: 32px;
+        grid-row-gap: 0px;
+        }
+        
+        .woocommerce-NoticeGroup-checkout { grid-area: 1 / 1 / 2 / 3; }
+        .checkout__customer-details { grid-area: 2 / 1 / 3 / 2; }
+        .order-review__wrapper { grid-area: 2 / 2 / 3 / 3; }
 
 
     .checkout p.form-row-first,
