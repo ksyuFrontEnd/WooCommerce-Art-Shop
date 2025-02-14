@@ -56,6 +56,11 @@
 
 /* ----------------------------- Checkout form ------------------------------------------ */
 
+.checkout {
+    display: flex;
+    flex-direction: column;
+}
+
 .woocommerce-billing-fields__field-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -101,7 +106,8 @@
     margin: 32px 0;
 }
 
-.woocommerce-billing-fields h3 {
+.woocommerce-billing-fields h3,
+.order-review__wrapper h3 {
     font-size: 24px;
     font-weight: 700;
     color: #039999;
@@ -116,6 +122,77 @@ abbr[title] {
     display: none;
 }
 
+/* ---------------------------------------- Order review ---------------------------------------- */
+
+.woocommerce-checkout-review-order-table tr {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.woocommerce-checkout-review-order-table .product-name {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+/*-------------------------------------------- Payment ------------------------------------------*/
+
+.woocommerce-checkout-payment {
+    margin-top: 32px;
+}
+
+.wc_payment_methods {
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------- Privacy policy -------------------------------------- */
+
+.woocommerce-form__label-for-checkbox {
+    font-size: 14px;
+}
+
+.woocommerce-form__label-for-checkbox input {
+    height: 15px;
+    width: 15px;
+    margin-bottom: 0;
+}
+
+.woocommerce-terms-and-conditions-link {
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.woocommerce-terms-and-conditions-link:hover {
+    color: #039999;
+}
+
+/*------------------------------------------- Order button -------------------------------------- */
+
+.order-button {
+    background: #d71232;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .3em;
+    line-height: 1.42;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    user-select: none;
+    min-width: 150px;
+    width: 100%;
+    height: 50px;
+}
+
 /* --------------------------------------- Tablet and Desktop ------------------------------------ */
 
 @media screen and (min-width: 768px) {
@@ -126,14 +203,22 @@ abbr[title] {
         gap: 30px;
     }
 
+    .checkout {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+
     .checkout p.form-row-first,
     .checkout p.form-row-last {
         width: 49%;
     }
+
+    .order-review__wrapper {
+        margin: 32px 0;
+    }
 }
 
 @media screen and (min-width: 1440px) {
-    .woocommerce-billing-fields__field-wrapper {
-        width: 60%;
-    }
+   
 }

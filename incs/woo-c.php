@@ -108,9 +108,23 @@ add_filter( 'woocommerce_default_address_fields' , function($fields) {
     return $fields;
 }); 
 
-add_filter( 'woocommerce_checkout_fields' , function($fields) {
+// Adding field for Nova Poshta Department Number in checkout form
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
-    $fields['billing']['billing_phone']['required'] = false;
+function custom_override_checkout_fields( $fields ) {
+     $fields['billing']['billing_department'] = array(
+        'label'       => __( 'Номер відділення Нової Пошти', 'woocommerce' ),
+        'placeholder' => _x( '', 'placeholder', 'woocommerce' ),
+        'required'    => true,
+        'class'       => array( 'form-row-wide' ),
+        'clear'       => true
+     );
 
-    return $fields;
-}); 
+     return $fields;
+}
+
+add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
+
+function my_custom_checkout_field_display_admin_order_meta($order){
+    echo '<p><strong>'. esc_html__( 'Department From Checkout Form' ) . ':</strong> ' . esc_html( $order->get_meta( '_billing_department', true ) ) . '</p>';
+}
