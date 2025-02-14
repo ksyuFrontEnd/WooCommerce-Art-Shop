@@ -88,3 +88,29 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
 
 // Remove SKU and category from single product description
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+// Remove unnecessary fields from checkout form
+add_filter( 'woocommerce_default_address_fields' , function($fields) {
+
+    unset( $fields['company'], $fields['address_2'], $fields['postcode'], $fields['country'] );
+
+    return $fields;
+
+} );
+
+// Customize fields in checkout form
+add_filter( 'woocommerce_default_address_fields' , function($fields) {
+
+    $fields['address_1']['label'] = "Номер будинку та назва вулиці";
+    $fields['address_1']['placeholder'] = "";
+    $fields['state']['label'] = "Область";
+    
+    return $fields;
+}); 
+
+add_filter( 'woocommerce_checkout_fields' , function($fields) {
+
+    $fields['billing']['billing_phone']['required'] = false;
+
+    return $fields;
+}); 

@@ -137,7 +137,6 @@ select,
 optgroup,
 textarea {
     font-family: 'helvetica-light', sans-serif;
-    /* text-transform: uppercase; */
     letter-spacing: 0.2em;
     font-size: 14px;
     font-style: normal;
