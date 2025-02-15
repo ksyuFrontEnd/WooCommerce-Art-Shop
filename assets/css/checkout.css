@@ -131,6 +131,7 @@ abbr[title] {
 
 .woocommerce-error li {
     color: #d71232;
+    font-weight: 700;
 }
 
 /* ---------------------------------------- Order review ---------------------------------------- */
@@ -208,6 +209,41 @@ abbr[title] {
     height: 50px;
 }
 
+/* ---------------------------------------- Thank you -------------------------------------------- */
+
+.woocommerce-order {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.woocommerce-thankyou-order-received {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #ffd333;
+    padding: 10px 20px;
+}
+
+.wc-bacs-bank-details-heading,
+.woocommerce-order-details__title,
+.woocommerce-column__title {
+    color: #039999;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.woocommerce-order-details table {
+    width: 100%;
+}
+
+.woocommerce-order-details th,
+.woocommerce-order-details td {
+    border-bottom: 1px solid #039999;
+    padding: 5px 0;
+    text-align: left;
+}
+
 /* --------------------------------------- Tablet and Desktop ------------------------------------ */
 
 @media screen and (min-width: 768px) {
@@ -218,17 +254,10 @@ abbr[title] {
         gap: 30px;
     }
 
-    /* .checkout {
-        flex-direction: row;
-        gap: 32px;
-    } */
-
     .checkout {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 10%, 1fr;
         grid-column-gap: 32px;
-        grid-row-gap: 0px;
         }
         
         .woocommerce-NoticeGroup-checkout { grid-area: 1 / 1 / 2 / 3; }
@@ -244,8 +273,4 @@ abbr[title] {
     .order-review__wrapper {
         margin: 32px 0;
     }
-}
-
-@media screen and (min-width: 1440px) {
-   
 }
