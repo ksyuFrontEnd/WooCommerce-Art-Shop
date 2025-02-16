@@ -46,7 +46,9 @@
                             </div>
                         </div>
                         <div class="header__icon registration-icon">
-                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/registration.svg'); ?>" alt="Registration">
+                            <a href="<?php echo esc_url(wc_get_page_permalink('myaccount')); ?>">
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/registration.svg'); ?>" alt="Registration">
+                            </a>
                         </div>
                         
                         <!-- Mini-cart ----------------------------------------------------------------------------->
