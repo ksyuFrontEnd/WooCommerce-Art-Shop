@@ -7,6 +7,7 @@
 @import "./product.css";
 @import "./cart.css";
 @import "./checkout.css";
+@import "./myaccount.css";
 
 /* Star rating and comments */
 .roxydev-rating {

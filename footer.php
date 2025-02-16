@@ -1,4 +1,4 @@
-        <div class="footer">
+        <footer class="footer">
             <div class="container">
                 <div class="header__social-icons">
                     <ul class="social-icons">
@@ -26,9 +26,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    
-    </div> <!--class="wrapper" -->
-<?php wp_footer(); ?>
+        </footer>
+    <?php wp_footer(); ?>
+</div> <!--class="wrapper" -->
 </body>
 </html>

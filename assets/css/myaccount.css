@@ -1,0 +1,85 @@
+/* --------------------- Form Login (unlogged user) ---------------------------- */
+
+.form-login__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.form-login__title {
+    color: #039999;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form-login__wrapper input {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.form-login__wrapper .woocommerce-form__input-checkbox {
+    height: 15px;
+    width: 15px;
+    margin-bottom: 0;
+}
+
+.form-login__button {
+    background: #039999;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .3em;
+    line-height: 1.42;
+    margin: 15px auto;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    user-select: none;
+    min-width: 150px;
+    width: 100%;
+    height: 45px;
+}
+
+.woocommerce-LostPassword {
+    text-decoration: underline;
+}
+
+.woocommerce-password-strength.short,
+.woocommerce-password-strength.bad {
+    color: #d71232;
+    font-weight: 700;
+}
+
+.woocommerce-password-strength.good,
+.woocommerce-password-strength.strong {
+    color: #039999;
+    font-weight: 700;
+}
+
+
+.woocommerce-password-hint {
+    display: block;
+    border: 1px solid #039999;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.woocommerce-privacy-policy-link {
+    text-decoration: underline;
+}
+
+/* --------------------- My account (logged user) ---------------------------- */
