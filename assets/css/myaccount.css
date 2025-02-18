@@ -83,3 +83,45 @@
 }
 
 /* --------------------- My account (logged user) ---------------------------- */
+
+.my-account__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.my-account__hello-text {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.my-account__hello-text a {
+    color: #039999;
+}
+
+.woocommerce-MyAccount-content,
+.woocommerce-MyAccount-content table {
+    width: 100%;
+}
+
+.woocommerce-MyAccount-orders tr, th,
+.woocommerce-MyAccount-orders tr, td  {
+    border-bottom: 1px solid #039999;
+    padding: 5px 0;
+    text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+    .my-account__container {
+        flex-direction: row;
+        gap: 56px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .my-account__container {
+        flex-direction: row;
+        gap: 80px;
+    }
+}
