@@ -154,10 +154,11 @@
 }
 
 /* Address */
-.woocommerce-Address-title h2 {
+.my-account-address__title {
     color: #039999;
     font-weight: 700;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .woocommerce-Address-title a {
@@ -173,7 +174,7 @@ text-decoration: underline;
 }
 
 /* Change address */
-.woocommerce-MyAccount-content h2 {
+.my-account-edit-address__title {
     color: #039999;
     font-weight: 700;
     margin-bottom: 10px;
