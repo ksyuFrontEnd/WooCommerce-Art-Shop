@@ -91,6 +91,20 @@
     /* padding: 50px 32px 180px; */
 }
 
+.woocommerce-MyAccount-navigation {
+    text-align: center;
+}
+
+.woocommerce-MyAccount-navigation li {
+    font-size: 24px;
+    color: #039999;
+    margin-bottom: 10px;
+}
+
+.woocommerce-MyAccount-navigation li:last-child {
+    margin-bottom: 0;
+}
+
 .my-account__hello-text {
     text-align: center;
     font-size: 24px;
@@ -133,10 +147,25 @@
     text-align: left;
 }
 
+/* Order details */
+.woocommerce-MyAccount-content p,
+.woocommerce-order-details {
+    margin-bottom: 30px;
+}
+
+
 @media screen and (min-width: 768px) {
     .my-account__container {
         gap: 56px;
         /* padding: 50px 56px 180px; */
+    }
+
+    .woocommerce-MyAccount-navigation {
+        text-align: left;
+    }
+    
+    .woocommerce-MyAccount-navigation li {
+        font-size: 16px;
     }
 
     /* Orders Table */
