@@ -153,6 +153,77 @@
     margin-bottom: 30px;
 }
 
+/* Address */
+.woocommerce-Address-title h2 {
+    color: #039999;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.woocommerce-Address-title a {
+    color: #039999;
+}
+
+.woocommerce-Address header {
+    margin-bottom: 10px;
+}
+
+.woocommerce-Address-title a:hover {
+text-decoration: underline;
+}
+
+/* Change address */
+.woocommerce-MyAccount-content h2 {
+    color: #039999;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.woocommerce-address-fields__field-wrapper p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.woocommerce-address-fields__field-wrapper input {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.woocommerce-MyAccount-content form {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.woocommerce-address-fields button {
+    background: #039999;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .3em;
+    line-height: 1.42;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    user-select: none;
+    min-width: 150px;
+    width: 100%;
+    height: 50px;
+}
 
 @media screen and (min-width: 768px) {
     .my-account__container {
