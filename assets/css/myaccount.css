@@ -88,6 +88,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+    /* padding: 50px 32px 180px; */
 }
 
 .my-account__hello-text {
@@ -100,9 +101,29 @@
     color: #039999;
 }
 
+/* Orders Table */
 .woocommerce-MyAccount-content,
 .woocommerce-MyAccount-content table {
     width: 100%;
+}
+
+.woocommerce-MyAccount-content thead {
+    display: none;
+}
+
+.woocommerce-MyAccount-orders th {
+    padding-right: 10px;
+}
+
+.woocommerce-MyAccount-content td {
+    display: block;
+    text-align: right;
+}
+
+.woocommerce-MyAccount-content td::before {
+    content: attr(data-title);
+    float: left;
+    font-weight: 700;
 }
 
 .woocommerce-MyAccount-orders tr, th,
@@ -114,14 +135,35 @@
 
 @media screen and (min-width: 768px) {
     .my-account__container {
-        flex-direction: row;
         gap: 56px;
+        /* padding: 50px 56px 180px; */
     }
+
+    /* Orders Table */
+    .woocommerce-MyAccount-content thead {
+        display: table-header-group;
+    }
+
+    .woocommerce-MyAccount-orders th {
+        padding-right: 10px;
+    }
+
+    .woocommerce-MyAccount-content td {
+        display: table-cell;
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    .woocommerce-MyAccount-content td::before {
+        display: none;
+    }
+
 }
 
 @media screen and (min-width: 1440px) {
     .my-account__container {
         flex-direction: row;
         gap: 80px;
+        /* padding: 50px 80px 200px; */
     }
 }
