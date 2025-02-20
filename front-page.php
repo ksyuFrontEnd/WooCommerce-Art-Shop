@@ -6,7 +6,7 @@
     <section class="announcement-section first-section section">
         <div class="announcement-section__container">
             <a href="/" class="announcement-section__link">
-                <h6>Отримати новорічну знижку 10%</h6>
+            Where Every Piece Has a Soul
             </a> 
         </div>
     </section>
