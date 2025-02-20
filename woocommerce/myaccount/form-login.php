@@ -19,14 +19,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-do_action( 'woocommerce_before_main_content' );
-
-do_action( 'woocommerce_before_customer_login_form' ); ?>
-
-<?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
+do_action( 'woocommerce_before_main_content' ); ?>
 
 <section class="section">
 	<div class="container">
+
+		<?php do_action( 'woocommerce_before_customer_login_form' ); ?>
+
+		<?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
 		<div class="form-login__wrapper u-columns col2-set" id="customer_login">
 
@@ -120,11 +120,13 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			</div>
 
 		</div>
-	 </div> <!--./container -->
+	 
+		<?php endif; ?>
+
+		<?php do_action( 'woocommerce_after_customer_login_form' ); ?>
+
+	</div> <!--./container -->
 </section>
 
-<?php endif; ?>
-
-<?php do_action( 'woocommerce_after_customer_login_form' ); ?>
 
 <?php do_action( 'woocommerce_after_main_content' ); ?>
