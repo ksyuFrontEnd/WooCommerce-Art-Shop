@@ -92,7 +92,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 // Remove unnecessary fields from checkout form
 add_filter( 'woocommerce_default_address_fields' , function($fields) {
 
-    unset( $fields['company'], $fields['address_2'], $fields['postcode'], $fields['country'] );
+    unset( $fields['company'], $fields['address_2'] );
 
     return $fields;
 

@@ -244,7 +244,7 @@ text-decoration: underline;
 .woocommerce-address-fields__field-wrapper p {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .woocommerce-address-fields__field-wrapper input {
@@ -253,7 +253,6 @@ text-decoration: underline;
     height: 40px;
     width: 100%;
     padding: 5px 10px;
-    margin-bottom: 10px;
 }
 
 .woocommerce-MyAccount-content form {
