@@ -70,7 +70,6 @@
     font-weight: 700;
 }
 
-
 .woocommerce-password-hint {
     display: block;
     border: 1px solid #039999;
@@ -173,6 +172,7 @@
 }
 
 /* Orders Table */
+
 .woocommerce-MyAccount-content,
 .woocommerce-MyAccount-content table {
     width: 100%;
@@ -205,12 +205,14 @@
 }
 
 /* Order details */
+
 .woocommerce-MyAccount-content p,
 .woocommerce-order-details {
     margin-bottom: 30px;
 }
 
 /* Address */
+
 .my-account-address__title {
     color: #039999;
     font-weight: 700;
@@ -231,6 +233,7 @@ text-decoration: underline;
 }
 
 /* Change address */
+
 .my-account-edit-address__title {
     color: #039999;
     font-weight: 700;
