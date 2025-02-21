@@ -197,8 +197,9 @@
     font-weight: 700;
 }
 
-.woocommerce-MyAccount-orders tr, th,
-.woocommerce-MyAccount-orders tr, td  {
+.woocommerce-MyAccount-content .woocommerce-MyAccount-orders tr, 
+.woocommerce-MyAccount-content .woocommerce-MyAccount-orders th, 
+.woocommerce-MyAccount-content .woocommerce-MyAccount-orders td  { 
     border-bottom: 1px solid #039999;
     padding: 5px 0;
     text-align: left;
