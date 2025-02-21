@@ -22,14 +22,20 @@ if ( $product->is_in_stock() ) : ?>
 		<div class="product__add2cart">
 
 			<?php
-			woocommerce_quantity_input(
-				array(
-					'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-					'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-					'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-				)
-			);
+			$min_quantity = $product->get_min_purchase_quantity();
+			$max_quantity = $product->get_max_purchase_quantity();
+			$stock_quantity = $product->get_stock_quantity();
+			$is_sold_individually = $product->is_sold_individually();
 
+			if ( ! ( $is_sold_individually || $stock_quantity === 1 ) ) {
+				woocommerce_quantity_input(
+					array(
+						'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $min_quantity, $product ),
+						'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $max_quantity, $product ),
+						'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $min_quantity, // WPCS: CSRF ok, input var ok.
+					)
+				);
+			}
 			?>
 
 			<?php do_action( 'woocommerce_after_add_to_cart_quantity' ); ?> 
