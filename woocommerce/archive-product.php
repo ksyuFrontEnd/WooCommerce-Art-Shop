@@ -74,7 +74,7 @@
 					 </div> <!-- ./shop__content-loop -->
 				</div>
 
-			 </div> <!--./shop__wrapper -->
+			</div> <!--./shop__wrapper -->
 		 </div> <!--./container -->
 	</section>
 
