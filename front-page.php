@@ -60,7 +60,8 @@
     <section class="categories__section section">
         <div class="container">
             <h2 class="section__title categories__title">
-                <span><?php _e( 'Categories', 'roxydev' )?></span>
+                <!-- <span><?php _e( 'Categories', 'roxydev' )?></span> -->
+                <span>Категорії</span>
             </h2>
             <div class="categories__wrapper">
                 <?php echo do_shortcode( '[product_categories]' ); ?>
@@ -72,10 +73,11 @@
     <section class="featured-products__section section">
         <div class="container">
             <h2 class="section__title featured-products__title">
-                <span><?php _e( 'Featured products', 'roxydev' )?></span>
+                <!-- <span><?php _e( 'Featured products', 'roxydev' )?></span> -->
+                <span>Рекомендовані товари</span>
             </h2>
             <div class="featured-products__wrapper">
-                <?php echo do_shortcode( '[featured_products limit="8"]' ); ?>
+                <?php echo do_shortcode( '[featured_products limit="4"]' ); ?>
             </div>
 
         </div>
