@@ -63,7 +63,7 @@ remove_action( 'woocommerce_shop_loop_subcategory_title', 'woocommerce_template_
 
 // Add custom titles for categories on the front-page
 add_action( 'woocommerce_shop_loop_subcategory_title', function( $category ) {
-    echo "<h5 class='category-title'>{$category->name} <span>({$category->count})</span></h5>";
+    echo "<h5 class='category-title'>{$category->name}</h5>";
 }, 10 );
 
 // Remove sidebar from single product page

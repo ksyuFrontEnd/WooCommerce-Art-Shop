@@ -8,6 +8,9 @@ jQuery(document).ready(function($) {
             nextEl: '.button-next',
             prevEl: '.button-prev',
         },
+        autoplay: {
+            delay: 3000,
+        },
     });
 
     // Add_to_cart_loader on the product card
@@ -34,5 +37,32 @@ jQuery(document).ready(function($) {
        }
        inputQty.val(newValue);
        $('.update-cart').prop('disabled', false);
+    });
+
+    // Show and hide categories on the front-page
+    let hiddenItems = $(".product-category.hidden");
+    let showMoreBtn = $("#show-more");
+    let itemsToShow = 3; 
+    let initiallyVisible = 6; 
+
+    hiddenItems.hide(); 
+
+    if (hiddenItems.length === 0) {
+        showMoreBtn.hide();
+    }
+
+    showMoreBtn.on("click", function() {
+        let currentlyHidden = $(".product-category.hidden");
+
+        if (currentlyHidden.length > 0) {
+            currentlyHidden.slice(0, itemsToShow).slideDown().removeClass("hidden");
+
+            if ($(".product-category.hidden").length === 0) {
+                showMoreBtn.text("Сховати"); 
+            }
+        } else {
+            $(".product-category").slice(initiallyVisible).addClass("hidden").hide();
+            showMoreBtn.text("Показати ще");
+        }
     });
 });

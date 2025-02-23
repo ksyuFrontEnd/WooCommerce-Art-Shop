@@ -246,6 +246,7 @@
 
     .menu-item:hover {
         color: #039999;
+        text-decoration: none;
     }
 
     .menu-item.active {
@@ -261,7 +262,7 @@
     position: relative;
 }
 
-.mini-cart {
+/* .mini-cart {
     position: absolute;
     top: 100%; 
     right: 0;
@@ -273,14 +274,14 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
+} */
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
     .header-cart:hover .mini-cart {
         display: block;
         opacity: 1;
     }
-}
+} */
 
 .cart-count {
     width: 23px;
