@@ -52,7 +52,7 @@
                         </div>
                         
                         <!-- Mini-cart ----------------------------------------------------------------------------->
-                         <?php if ( ! is_cart() ): ?>
+                        <?php if ( ! is_cart() ): ?>
                             <div class="header-cart">
                                 <!-- Cart icon -->
                                 <div class="header__icon cart-icon">
@@ -68,13 +68,6 @@
                                             </div>
                                         <?php endif; ?>
                                     </a>
-                                </div>
-
-                                <!-- Mini cart content-->
-                                <div id="mini-cart" class="mini-cart">
-                                    <?php if (function_exists('woocommerce_mini_cart')) {
-                                        woocommerce_mini_cart();
-                                    } ?>
                                 </div>
                             </div>  
                         <?php endif; ?>

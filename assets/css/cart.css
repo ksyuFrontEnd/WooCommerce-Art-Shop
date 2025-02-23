@@ -216,6 +216,12 @@
     height: 50px;
 }
 
+/* Cart empty */
+
+.cart-empty__section {
+    padding: 200px 0 250px;
+}
+
 @media screen and (min-width: 375px) {
     .soulcraft_table__body .product-name {
         width: 62%;

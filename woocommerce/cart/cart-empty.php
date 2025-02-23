@@ -19,8 +19,8 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_main_content' ); ?>
 
-	<section class="section">
-		<div class="container">
+	<section class="cart-empty__section section">
+		<div class="cart-empty__container container">
 
 			<?php
 
