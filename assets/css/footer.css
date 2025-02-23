@@ -25,6 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #353535;
 }
 
 .footer__copyright-text a p {
