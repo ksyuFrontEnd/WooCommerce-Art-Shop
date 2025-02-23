@@ -52,6 +52,15 @@
     min-width: 150px;
     width: 100%;
     height: 45px;
+    transition: background 0.3s ease;
+}
+
+.form-login__button:hover {
+    background: #006f6f;
+}
+
+.form-login__button:active {
+    background: #006f6f;
 }
 
 .woocommerce-LostPassword {
@@ -115,7 +124,7 @@
 }
 
 .lost-password-form__wrapper button {
-    background: #039999;
+    background: #d71232;
     border: 1px solid transparent;
     border-radius: 3px;
     color: #fff;
@@ -136,6 +145,15 @@
     min-width: 150px;
     width: 100%;
     height: 45px;
+    transition: background 0.3s ease;
+}
+
+.lost-password-form__wrapper button:hover {
+    background: #a2001b;
+}
+
+.lost-password-form__wrapper button:active {
+    background: #a2001b;
 }
 
 /* --------------------- My account (logged user) ---------------------------- */

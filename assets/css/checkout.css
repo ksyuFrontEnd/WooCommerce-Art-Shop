@@ -1,8 +1,36 @@
 /* ---------------------------- Coupon ------------------------------------- */
 
-.woocommerce-form-coupon-toggle .click-here-message {
+.woocommerce-form-coupon-toggle .click-here-message,
+.showlogin {
     color: #039999;
     font-weight: 700;
+}
+
+.woocommerce-form-login {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.woocommerce-form-login p {
+    margin-bottom: 10px;
+}
+
+.woocommerce-form-login p.lost_password {
+    text-decoration: underline;
+}
+
+.woocommerce-form-login-toggle .woocommerce-info {
+    padding-bottom: 10px;
+}
+
+.woocommerce-form-login .input-text {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+    padding: 5px 10px;
 }
 
 .checkout_coupon {
@@ -207,6 +235,15 @@ abbr[title] {
     min-width: 150px;
     width: 100%;
     height: 50px;
+    transition: background 0.3s ease;
+}
+
+.order-button:hover {
+    background: #a2001b;
+}
+
+.order-button:active {
+    background: #a2001b;
 }
 
 /* ---------------------------------------- Thank you -------------------------------------------- */
